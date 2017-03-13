@@ -25,10 +25,13 @@ var MagasinData = (function () {
     };
     MagasinData.prototype.selectMag = function (event) {
         this.selectedMagasin = event;
+        /*
         console.log(event);
         console.log(event.description);
         console.log(event.id);
         console.log(event.name);
+        */
+        console.log(JSON.stringify(event));
     };
     MagasinData = __decorate([
         core_1.Component({

@@ -30,7 +30,7 @@ var MagasinDetail = (function () {
             moduleId: module.id,
             selector: 'magasin-detail',
             templateUrl: './magasin.html',
-            styleUrls: ['./magasin.css']
+            styleUrls: ['./magasin.css'],
         }), 
         __metadata('design:paramtypes', [])
     ], MagasinDetail);

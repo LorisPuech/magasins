@@ -15,6 +15,12 @@ var Magasin = (function () {
         this.name = name;
         this.description = description;
     }
+    Magasin.prototype.showName = function () {
+        return this.name;
+    };
+    Magasin.prototype.showDescription = function () {
+        return this.description;
+    };
     Magasin = __decorate([
         core_1.Component({
             selector: 'magasin',
