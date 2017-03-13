@@ -10,7 +10,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var Magasin = (function () {
-    function Magasin() {
+    function Magasin(id, name, description) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
     }
     Magasin = __decorate([
         core_1.Component({
@@ -19,7 +22,7 @@ var Magasin = (function () {
             templateUrl: './magasin.html',
             styleUrls: ['./magasin.css']
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [Number, String, String])
     ], Magasin);
     return Magasin;
 }());

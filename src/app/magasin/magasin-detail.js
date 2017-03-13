@@ -9,22 +9,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var platform_browser_1 = require('@angular/platform-browser');
-var app_component_1 = require('./app.component');
-var magasin_1 = require('./magasin/magasin');
-var magasin_data_1 = require('./magasin/magasin-data');
-var AppModule = (function () {
-    function AppModule() {
+var magasin_1 = require('./magasin');
+var MagasinDetail = (function () {
+    function MagasinDetail() {
+        this.mag = magasin_1.Magasin;
     }
-    AppModule = __decorate([
-        core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule],
-            declarations: [app_component_1.AppComponent, magasin_1.Magasin, magasin_data_1.MagasinData],
-            bootstrap: [app_component_1.AppComponent]
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Object)
+    ], MagasinDetail.prototype, "mag", void 0);
+    MagasinDetail = __decorate([
+        core_1.Component({
+            moduleId: module.id,
+            selector: 'magasin-detail',
+            templateUrl: './magasin.html',
+            styleUrls: ['./magasin.css']
         }), 
         __metadata('design:paramtypes', [])
-    ], AppModule);
-    return AppModule;
+    ], MagasinDetail);
+    return MagasinDetail;
 }());
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+exports.MagasinDetail = MagasinDetail;
+//# sourceMappingURL=magasin-detail.js.map

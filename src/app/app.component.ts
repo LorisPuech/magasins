@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 
+import { Magasin } from './magasin/magasin';
+import { MagasinData } from './magasin/magasin-data';
+
 @Component({
   moduleId: module.id,
   selector: 'my-app',
@@ -8,5 +11,5 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent  { 
-  name = 'Angular'; 
+  name = 'Angular';
 }

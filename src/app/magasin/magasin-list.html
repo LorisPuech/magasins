@@ -1,0 +1,5 @@
+<div class="container">
+    <select class="form-control">
+        <option *ngFor="let shop of shops" [class.selected]="mag === selectedMag" [(ngModelChange)]="selectMag(shop)">{{shop.name}}</option>
+    </select>
+</div>
