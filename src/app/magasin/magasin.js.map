@@ -1,0 +1,1 @@
+{"version":3,"file":"magasin.js","sourceRoot":"","sources":["magasin.ts"],"names":[],"mappings":";;;;;;;;;;AAAA,qBAAwB,eAAe,CAAC,CAAA;AASxC;IAAA;IAEA,CAAC;IATD;QAAC,gBAAS,CAAC;YACP,QAAQ,EAAE,MAAM,CAAC,EAAE;YACnB,QAAQ,EAAE,SAAS;YACnB,WAAW,EAAE,gBAAgB;YAC7B,SAAS,EAAE,CAAC,eAAe,CAAC;SAC/B,CAAC;;eAAA;IAIF,cAAC;AAAD,CAAC,AAFD,IAEC;AAFY,eAAO,UAEnB,CAAA"}
