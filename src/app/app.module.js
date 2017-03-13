@@ -10,17 +10,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
+var forms_1 = require('@angular/forms');
 var app_component_1 = require('./app.component');
-var magasin_1 = require('./magasin/magasin');
 var magasin_data_1 = require('./magasin/magasin-data');
+var magasin_detail_1 = require('./magasin/magasin-detail');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule],
-            declarations: [app_component_1.AppComponent, magasin_1.Magasin, magasin_data_1.MagasinData],
-            bootstrap: [app_component_1.AppComponent]
+            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule],
+            declarations: [app_component_1.AppComponent, magasin_data_1.MagasinData, magasin_detail_1.MagasinDetail],
+            bootstrap: [app_component_1.AppComponent, magasin_data_1.MagasinData, magasin_detail_1.MagasinDetail]
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);

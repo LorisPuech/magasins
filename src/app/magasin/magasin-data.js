@@ -19,10 +19,16 @@ var MagasinData = (function () {
             new magasin_1.Magasin(4, 'Retail Drive', 'Seconde société à l\'origine du projet Synergee'),
             new magasin_1.Magasin(5, 'Midas', 'Société automobile'),
         ];
-        this.myShop = this.shops[0];
     }
-    MagasinData.prototype.selectMag = function (mag) {
-        this.selectedMag = mag;
+    MagasinData.prototype.ngOnInit = function () {
+        this.selectMag(this.shops[0]);
+    };
+    MagasinData.prototype.selectMag = function (event) {
+        this.selectedMagasin = event;
+        console.log(event);
+        console.log(event.description);
+        console.log(event.id);
+        console.log(event.name);
     };
     MagasinData = __decorate([
         core_1.Component({

@@ -1,10 +1,8 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-    moduleId: module.id,
     selector: 'magasin',
-    templateUrl: './magasin.html',
-    styleUrls: ['./magasin.css']
+    template: ''
 })
 
 export class Magasin {

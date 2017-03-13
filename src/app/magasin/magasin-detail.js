@@ -12,11 +12,18 @@ var core_1 = require('@angular/core');
 var magasin_1 = require('./magasin');
 var MagasinDetail = (function () {
     function MagasinDetail() {
-        this.mag = magasin_1.Magasin;
     }
+    MagasinDetail.prototype.ngOnInit = function () {
+        if (this.mag != null) {
+            console.log(this.mag.id);
+        }
+        else {
+            console.log("Aucun magasin");
+        }
+    };
     __decorate([
         core_1.Input(), 
-        __metadata('design:type', Object)
+        __metadata('design:type', magasin_1.Magasin)
     ], MagasinDetail.prototype, "mag", void 0);
     MagasinDetail = __decorate([
         core_1.Component({

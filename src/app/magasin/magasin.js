@@ -17,10 +17,8 @@ var Magasin = (function () {
     }
     Magasin = __decorate([
         core_1.Component({
-            moduleId: module.id,
             selector: 'magasin',
-            templateUrl: './magasin.html',
-            styleUrls: ['./magasin.css']
+            template: ''
         }), 
         __metadata('design:paramtypes', [Number, String, String])
     ], Magasin);
