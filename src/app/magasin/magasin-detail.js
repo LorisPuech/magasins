@@ -13,14 +13,6 @@ var magasin_1 = require('./magasin');
 var MagasinDetail = (function () {
     function MagasinDetail() {
     }
-    MagasinDetail.prototype.ngOnInit = function () {
-        if (this.mag != null) {
-            console.log(this.mag.id);
-        }
-        else {
-            console.log("Aucun magasin");
-        }
-    };
     __decorate([
         core_1.Input(), 
         __metadata('design:type', magasin_1.Magasin)

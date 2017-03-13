@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+
 import { Magasin } from './magasin';
 
 @Component({
@@ -8,14 +9,6 @@ import { Magasin } from './magasin';
     styleUrls: ['./magasin.css'],
 })
 
-export class MagasinDetail implements OnInit {
+export class MagasinDetail {
     @Input() mag: Magasin;
-
-    ngOnInit(){
-        if(this.mag != null){
-            console.log(this.mag.id);
-        }else{
-            console.log("Aucun magasin");
-        }
-    }
 }

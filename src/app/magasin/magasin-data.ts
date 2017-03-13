@@ -24,14 +24,7 @@ export class MagasinData implements OnInit{
 
     selectedMagasin: Magasin;
 
-    public selectMag(event: any) {
+    public selectMag(event: any): void {
         this.selectedMagasin = event;
-        /*
-        console.log(event);
-        console.log(event.description);
-        console.log(event.id);
-        console.log(event.name);
-        */
-        console.log(JSON.stringify(event))
     }
 }

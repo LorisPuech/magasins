@@ -9,6 +9,6 @@ import { MagasinDetail } from './magasin/magasin-detail';
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
   declarations: [ AppComponent, MagasinData, MagasinDetail ],
-  bootstrap:    [ AppComponent, MagasinData, MagasinDetail ]
+  bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
