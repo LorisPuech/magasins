@@ -1,5 +1,5 @@
 <div>
-    <select required class="form-control" (change)="selectMag($event)">
+    <select required class="form-control" ([ngModel])="model" (ngModelChange)="selectMag($event)">
         <option *ngFor="let shop of shops" [ngValue]="shop">{{shop.name}}</option>
     </select>
 </div>

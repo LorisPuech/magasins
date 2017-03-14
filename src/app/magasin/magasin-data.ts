@@ -13,6 +13,7 @@ import { MagasinService } from './magasin.service';
 export class MagasinData implements OnInit{
     constructor(private magasinService: MagasinService) { }
     shops: Magasin[];
+    model: String = 'Sélectionner un magasin';
 
     ngOnInit(): void { 
         this.getShops();

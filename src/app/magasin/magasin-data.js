@@ -13,6 +13,7 @@ var magasin_service_1 = require('./magasin.service');
 var MagasinData = (function () {
     function MagasinData(magasinService) {
         this.magasinService = magasinService;
+        this.model = 'Sélectionner un magasin';
     }
     MagasinData.prototype.ngOnInit = function () {
         this.getShops();
