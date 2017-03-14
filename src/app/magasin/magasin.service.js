@@ -9,20 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var Magasin = (function () {
-    function Magasin(id, name, description) {
-        this.id = id;
-        this.name = name;
-        this.description = description;
+var mock_magasin_1 = require('./mock-magasin');
+var MagasinService = (function () {
+    function MagasinService() {
     }
-    Magasin = __decorate([
-        core_1.Component({
-            selector: 'magasin',
-            template: ''
-        }), 
-        __metadata('design:paramtypes', [Number, String, String])
-    ], Magasin);
-    return Magasin;
+    MagasinService.prototype.getMagasin = function () {
+        return Promise.resolve(mock_magasin_1.SHOPS);
+    };
+    MagasinService = __decorate([
+        core_1.Injectable(), 
+        __metadata('design:paramtypes', [])
+    ], MagasinService);
+    return MagasinService;
 }());
-exports.Magasin = Magasin;
-//# sourceMappingURL=magasin.js.map
+exports.MagasinService = MagasinService;
+//# sourceMappingURL=magasin.service.js.map

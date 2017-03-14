@@ -11,12 +11,4 @@ export class Magasin {
         public name: string,
         public description: string
     ){}
-
-    showName(){
-        return this.name;
-    }
-
-    showDescription(){
-        return this.description;
-    }
 }

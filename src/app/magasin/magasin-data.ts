@@ -1,30 +1,31 @@
 import { Component, OnInit } from '@angular/core';
 import { Magasin } from './magasin';
-import { MagasinDetail } from './magasin-detail';
+import { MagasinService } from './magasin.service';
 
 @Component({
     moduleId: module.id,
     selector: 'magasin-data',
     templateUrl: 'magasin-list.html',
-    styleUrls: ['./magasin-list.css']
+    styleUrls: ['./magasin-list.css'],
+    providers: [MagasinService]
 })
 
 export class MagasinData implements OnInit{
-    shops = [
-        new Magasin(1, 'Carrefour', 'Grande surface'),
-        new Magasin(2, 'Synergee', 'Solution de pilotage d\'un réseau de franchise'),
-        new Magasin(3, 'AGT Retail', 'Une des société à l\'origine de Synergee'),
-        new Magasin(4, 'Retail Drive', 'Seconde société à l\'origine du projet Synergee'),
-        new Magasin(5, 'Midas', 'Société automobile'),
-    ];
+    constructor(private magasinService: MagasinService) { }
+    shops: Magasin[];
 
-    ngOnInit(){
-        this.selectMag(this.shops[0]);
+    ngOnInit(): void { 
+        this.getShops();
     }
 
-    selectedMagasin: Magasin;
+    getShops(): void {
+        this.magasinService.getMagasin().then(shops => this.shops = shops);
+    }
 
     public selectMag(event: any): void {
         this.selectedMagasin = event;
     }
+
+    selectedMagasin: Magasin;
+    
 }

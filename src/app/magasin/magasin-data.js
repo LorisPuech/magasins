@@ -9,19 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var magasin_1 = require('./magasin');
+var magasin_service_1 = require('./magasin.service');
 var MagasinData = (function () {
-    function MagasinData() {
-        this.shops = [
-            new magasin_1.Magasin(1, 'Carrefour', 'Grande surface'),
-            new magasin_1.Magasin(2, 'Synergee', 'Solution de pilotage d\'un réseau de franchise'),
-            new magasin_1.Magasin(3, 'AGT Retail', 'Une des société à l\'origine de Synergee'),
-            new magasin_1.Magasin(4, 'Retail Drive', 'Seconde société à l\'origine du projet Synergee'),
-            new magasin_1.Magasin(5, 'Midas', 'Société automobile'),
-        ];
+    function MagasinData(magasinService) {
+        this.magasinService = magasinService;
     }
     MagasinData.prototype.ngOnInit = function () {
-        this.selectMag(this.shops[0]);
+        this.getShops();
+    };
+    MagasinData.prototype.getShops = function () {
+        var _this = this;
+        this.magasinService.getMagasin().then(function (shops) { return _this.shops = shops; });
     };
     MagasinData.prototype.selectMag = function (event) {
         this.selectedMagasin = event;
@@ -31,9 +29,10 @@ var MagasinData = (function () {
             moduleId: module.id,
             selector: 'magasin-data',
             templateUrl: 'magasin-list.html',
-            styleUrls: ['./magasin-list.css']
+            styleUrls: ['./magasin-list.css'],
+            providers: [magasin_service_1.MagasinService]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [magasin_service_1.MagasinService])
     ], MagasinData);
     return MagasinData;
 }());

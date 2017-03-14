@@ -1,6 +1,6 @@
-<div class="container">
-    <select class="form-control" [ngModel]="selectedMagasin" (ngModelChange)="selectMag($event)">
-        <option *ngFor="let leshop of shops" [ngValue]="leshop">{{leshop.name}}</option>
+<div>
+    <select required class="form-control" (change)="selectMag($event)">
+        <option *ngFor="let shop of shops" [ngValue]="shop">{{shop.name}}</option>
     </select>
 </div>
 
